@@ -25,7 +25,7 @@ namespace Lab5
         const string PROGRAMMER = "Uchechi";
 
         //declare class level variable for attempts
-        int attempts = 3;
+        int attempts = 0;
 
 
         //create GetRandom function
@@ -108,7 +108,7 @@ namespace Lab5
             txtString1.Focus();
             txtString2.Clear();
             chkSwap.Checked = false;
-            lblResults.Text = ""
+            lblResults.Text = "";
         }
 
         //create ResetStatsGrp function
@@ -184,7 +184,7 @@ namespace Lab5
         private Boolean CheckInput()
         {   
             //declare variables
-            string first, second;
+            bool string first, second;
             
             //validate input in textboxes
             bool.TryParse(txtString1.Text, out first);
@@ -238,7 +238,7 @@ namespace Lab5
         private void btnGenerate_Click(object sender, EventArgs e)
         {
             //generate random object with seed value
-            Random r = new Random(533);
+            Random r = new Random(733);
             
             for (int i = 0; i < nudHowMany.Value; i+= 1)
             {
